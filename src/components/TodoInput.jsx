@@ -15,7 +15,7 @@ function TodoInput() {
   return (
     <form onSubmit={handleSubmit} className="flex gap-2 mb-4 justify-center">
       <input
-        className="bg-gray-800 text-white rounded px-2 py-1"
+        className="  rounded px-2 py-1"
         type="text"
         value={text}
         onChange={e => setText(e.target.value)}

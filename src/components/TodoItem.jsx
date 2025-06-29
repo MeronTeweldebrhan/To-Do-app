@@ -14,8 +14,9 @@ function TodoItem({ todo }) {
   };
 
   return (
-    <li className="flex items-center gap-2 py-1">
+    <li className="flex items-center justify-between  py-1">
       <input
+      className="ms-200"
         type="checkbox"
         checked={todo.completed}
         onChange={() => toggleTodo(todo.id)}
@@ -40,13 +41,13 @@ function TodoItem({ todo }) {
         </span>
       )}
       <button
-        className="text-xs bg-yellow-500 text-white rounded px-2 py-1"
+        className="mr-10 text-xs bg-yellow-500 text-white rounded px-2 py-1"
         onClick={handleEdit}
       >
         {isEditing ? "Save" : "Edit"}
       </button>
       <button
-        className="text-xs bg-red-500 text-white rounded px-2 py-1"
+        className="mr-150 text-xs bg-red-500 text-white rounded px-2 py-1"
         onClick={() => deleteTodo(todo.id)}
       >
         Delete
