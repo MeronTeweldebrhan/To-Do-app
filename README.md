@@ -1,12 +1,48 @@
-# React + Vite
+# To-Do App
+A modern, persistent, and themeable To-Do application built with React, Context API, and custom hooks.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- Add, edit, delete, and toggle todos
+- Filter todos by All, Active, or Completed
+- Clear completed todos
+- Theme switching (Light/Dark mode)
+- State persistence using localStorage
+- Responsive UI with Tailwind CSS
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Folder Structure
+```
+src/
+  components/
+    TodoInput.jsx
+    TodoList.jsx
+    TodoItem.jsx
+    TodoFilter.jsx
+    ThemeToggleButton.jsx
+  context/
+    TodoContext.jsx
+    FilterContext.jsx
+    ThemeContext.jsx
+  hooks/
+    UseLocalStorage.js
+  App.jsx
+  index.css
+  main.jsx
+  ```
 
-## Expanding the ESLint configuration
+  ## Usage
+  ``
+  npm install
+  npm run dev
+  ``
+  ## How It Works
+- Todos and theme are stored in localStorage for persistence.
+- Context API is used for global state management (todos, filter, theme).
+- Custom hook useLocalStorage syncs state with localStorage automatically.
+- Theme toggle updates the root HTML class for dark mode support.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Customization
+
+- Edit ThemeContext.jsx to change theme logic.
+- Edit TodoContext.jsx to change todo logic.
+- Style with Tailwind or your own CSS.
